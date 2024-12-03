@@ -9,6 +9,9 @@ const {
   notFoundHandler,
   errorHandler,
 } = require("./middlewares/common/errorHandler");
+const loginRouter = require("./router/loginRouter");
+const userRouter = require("./router/userRouter");
+const inboxRouter = require("./router/inboxRouter");
 
 // Internal imports
 
@@ -36,7 +39,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // routing setup
 app.use("/", loginRouter);
-app.use("/users", usersRouter);
+app.use("/users", userRouter);
 app.use("/inbox", inboxRouter);
 
 // 404 not found handling
