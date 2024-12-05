@@ -7,3 +7,4 @@ function getInbox(req, res, next) {
 module.exports = {
   getInbox,
 };
+// just activites no code ....
